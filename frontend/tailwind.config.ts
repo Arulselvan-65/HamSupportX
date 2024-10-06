@@ -7,6 +7,9 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      'englebert' : ["Englebert", 'cursive'],
+    },
     extend: {
       colors: {
         background: "var(--background)",

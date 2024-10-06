@@ -8,17 +8,10 @@ function RootLayout({ children }: { children: React.ReactNode }) {
         <html lang="en">
         <body>
         <Providers>
-            <Navbar/>
-            <main className="min-h-screen bg-gradient-to-b from-blue-100 to-white">
-
+            <main className="min-h-screen">
                 {children}
             </main>
         </Providers>
-        <footer className="bg-blue-100 py-12">
-            <div className="container mx-auto px-4 text-center text-gray-600">
-                <p>Made with 💗 by 0xhaider</p>
-            </div>
-        </footer>
         </body>
         </html>
     );
