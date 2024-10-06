@@ -90,18 +90,61 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.creator-card {
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-}
-.creator-card img {
-    margin-right: 1rem;
-}
 .blurred-bg {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     padding: 1rem;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+}
+
+.active {
+    border-bottom: 2px solid #8a2be2;
+    color: #8a2be2;
+}
+.search-input {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+}
+.search-input:focus {
+    border-color: #8a2be2;
+}
+.creator-card {
+    background-color: transparent;
+}
+
+.blurred-bg {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.creator-card:hover {
+    background: rgba(40, 40, 40, 0.5);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    cursor: pointer;
+}
+.creator-rank {
+    color: #ffffff;
+}
+.creator-name {
+    color: #ffffff;
+}
+.creator-supporters {
+    color: #ffffff;
+}
+.rainbow-text {
+    background: linear-gradient(90deg, #ff6347, #ff4500, #ff8c00, #ffd700, #adff2f, #32cd32, #00ced1, #1e90ff, #8a2be2, #ff69b4);
+    background-size: 200% 200%;
+    animation: rainbow 5s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }

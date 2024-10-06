@@ -1,6 +1,6 @@
-// Sidebar.tsx
 'use client';
 import React from 'react';
+import Link from "next/link";
 
 interface SidebarProps {
     showLogo?: boolean;
@@ -29,10 +29,12 @@ const Sidebar: React.FC<SidebarProps> = ({ showLogo = true }) => {
                     <i className="fas fa-eye mr-3"></i>
                     View Page
                 </a>
-                <a className="flex items-center text-gray-300 hover:text-white bg-gray-800 p-2 rounded" href="#">
-                    <i className="fas fa-th mr-3"></i>
-                    Explore Creators
-                </a>
+                <Link href={"/dashboard/explore"}>
+                    <p className="flex items-center text-gray-300 hover:text-white bg-gray-800 p-2 rounded">
+                        <i className="fas fa-th mr-3"></i>
+                        Explore Creators
+                    </p>
+                </Link>
             </nav>
 
             <div className="mt-8">

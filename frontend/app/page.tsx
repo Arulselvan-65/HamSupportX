@@ -5,6 +5,12 @@ import Link from "next/link";
 const Home: NextPage = () => {
   return (
       <div className="overflow-hidden">
+          <div className="neon-circle circle-1">
+          </div>
+          <div className="neon-circle circle-2">
+          </div>
+          <div className="neon-circle circle-3">
+          </div>
 
           <div className="flex flex-col items-center justify-center min-h-screen px-4 md:px-8 lg:px-16 relative z-10">
               <div className="text-center mb-8 mt-10 md:mt-0">
@@ -38,7 +44,8 @@ const Home: NextPage = () => {
                           Decentralized Support
                       </h2>
                       <p className="text-gray-400">
-                          Empower creators with <br/>crypto payments and NFT memberships on a fully decentralized platform.
+                          Empower creators with <br/>crypto payments and NFT memberships on a fully decentralized
+                          platform.
                       </p>
                   </div>
                   <div
@@ -60,7 +67,8 @@ const Home: NextPage = () => {
                           Effortless Scalability
                       </h2>
                       <p className="text-gray-400">
-                          Designed to handle growth, your creator-fan interaction scales automatically with your audience.
+                          Designed to handle growth, your creator-fan interaction scales automatically with your
+                          audience.
                       </p>
                   </div>
                   <div

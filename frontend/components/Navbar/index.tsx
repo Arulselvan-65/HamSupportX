@@ -1,5 +1,6 @@
 'use client';
 import { useState } from "react";
+import ConnectButtonC from "@/components/ConnectButton";
 
 const Navbar: React.FC<{ toggleSidebar: () => void }> = ({ toggleSidebar }) => {
     const [profileMenuOpen, setProfileMenuOpen] = useState(false);
@@ -13,8 +14,8 @@ const Navbar: React.FC<{ toggleSidebar: () => void }> = ({ toggleSidebar }) => {
             <div>
                 {/* Mobile Navbar */}
                 <div
-                    className="relative top-0 left-0 right-0 bg-transparent p-4 md:hidden flex justify-between items-center z-50">
-                    <button className="text-white p-2 rounded" onClick={toggleSidebar}>
+                    className="relative top-0 left-0 right-0 bg-black p-4 md:hidden flex justify-between items-center z-50">
+                    <button className="text-white p-2 rounded cursor-pointer" onClick={toggleSidebar}>
                         <i className="fas fa-bars"></i>
                     </button>
 
@@ -23,11 +24,9 @@ const Navbar: React.FC<{ toggleSidebar: () => void }> = ({ toggleSidebar }) => {
                             HamSupportX
                         </h2>
                     </div>
-                    <button className="bg-gray-800 text-white p-2 rounded" onClick={toggleProfileMenu}>
-                        <i className="fas fa-user"></i>
-                    </button>
-                </div>
+                    <ConnectButtonC/>
 
+                </div>
 
                 {/* Mobile Profile Menu */}
                 {profileMenuOpen && (
