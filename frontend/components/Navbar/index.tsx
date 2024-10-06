@@ -1,82 +1,50 @@
-'use client'
-import { ConnectButton } from '@rainbow-me/rainbowkit';
-import Button from '../Button';
-import Image from "next/image";
-import wallet_icon from "@/assets/wallet-icon.png";
+'use client';
+import { useState } from "react";
 
-const Navbar = () => {
+const Navbar: React.FC<{ toggleSidebar: () => void }> = ({ toggleSidebar }) => {
+    const [profileMenuOpen, setProfileMenuOpen] = useState(false);
+
+    const toggleProfileMenu = () => {
+        setProfileMenuOpen(!profileMenuOpen);
+    };
+
     return (
-        <div>
-            <div className='flex justify-between px-6 py-2 bg-transparent'>
-                <div className="flex items-center p-0 h-[51px]">
-                    <h1 className='text-[30px] sm:text-[37px] font-bold text-gray-800 tracking-wider '>HamSupportX</h1>
+        <>
+            <div>
+                {/* Mobile Navbar */}
+                <div
+                    className="relative top-0 left-0 right-0 bg-transparent p-4 md:hidden flex justify-between items-center z-50">
+                    <button className="text-white p-2 rounded" onClick={toggleSidebar}>
+                        <i className="fas fa-bars"></i>
+                    </button>
+
+                    <div>
+                        <h2 className="text-1xl font-extrabold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-500 animate-pulse">
+                            HamSupportX
+                        </h2>
+                    </div>
+                    <button className="bg-gray-800 text-white p-2 rounded" onClick={toggleProfileMenu}>
+                        <i className="fas fa-user"></i>
+                    </button>
                 </div>
 
-                <ConnectButton.Custom>
-                    {({
-                          account,
-                          chain,
-                          openAccountModal,
-                          openConnectModal,
-                          openChainModal,
-                          mounted,
-                      }) => {
-                        const ready = mounted;
-                        const connected = ready && account && chain;
 
-                        return (
-                            <div
-                                {...(!ready && {
-                                    'aria-hidden': true,
-                                    style: {
-                                        opacity: 0,
-                                        pointerEvents: 'none',
-                                        userSelect: 'none',
-                                    },
-                                })}
-                            >
-                                {(() => {
-                                    if (!connected) {
-                                        return (
-                                            <Button onclick={openConnectModal} text={"Connect Wallet"}/>
-                                        );
-                                    }
-
-                                    if (chain.unsupported) {
-                                        return (
-                                            <button onClick={openChainModal} type="button">
-                                                Wrong network
-                                            </button>
-                                        );
-                                    }
-
-                                    return (
-                                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                                            <button
-                                                onClick={openAccountModal}
-                                                type="button"
-                                                style={{ textAlign: 'left' }}
-                                            >
-                                                <div
-                                                    className='flex items-center justify-center rounded-lg text-gray-200 bg-gray-800 w-40 px-1 h-[51px] text-[18px]'>
-                                                        <div className='flex w-12 items-center justify-start'>
-                                                            <Image src={wallet_icon}
-                                                                 style={{height: "35px", width:"35px"}} alt={"wallet-icon"}/>
-
-                                                        </div>
-                                                        {account.displayName}
-                                                </div>
-                                            </button>
-                                        </div>
-                                    );
-                                })()}
-                            </div>
-                        );
-                    }}
-                </ConnectButton.Custom>
-
+                {/* Mobile Profile Menu */}
+                {profileMenuOpen && (
+                    <div className="fixed top-16 right-4 bg-gray-900 rounded-lg shadow-lg py-2 z-50">
+                        <a className="block px-4 py-2 text-gray-300 hover:bg-gray-800" href="#">
+                            Profile
+                        </a>
+                        <a className="block px-4 py-2 text-gray-300 hover:bg-gray-800" href="#">
+                            Settings
+                        </a>
+                        <a className="block px-4 py-2 text-gray-300 hover:bg-gray-800" href="#">
+                            Logout
+                        </a>
+                    </div>
+                )}
             </div>
-        </div>
+        </>
     );
 };
 

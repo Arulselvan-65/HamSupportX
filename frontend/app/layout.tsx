@@ -7,11 +7,20 @@ function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
         <body>
-        <Providers>
-            <main className="min-h-screen">
-                {children}
-            </main>
-        </Providers>
+        <div className="bg-black text-white font-sans relative overflow-hidden">
+            <div className="neon-circle circle-1">
+            </div>
+            <div className="neon-circle circle-2">
+            </div>
+            <div className="neon-circle circle-3">
+            </div>
+
+            <Providers>
+                <main className="min-h-screen">
+                    {children}
+                </main>
+            </Providers>
+        </div>
         </body>
         </html>
     );

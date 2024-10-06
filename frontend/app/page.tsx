@@ -1,15 +1,14 @@
 import type { NextPage } from 'next';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
-      <div className="bg-black text-white relative overflow-hidden">
-          <div className="neon-circle circle-1"></div>
-          <div className="neon-circle circle-2"></div>
-          <div className="neon-circle circle-3"></div>
+      <div className="overflow-hidden">
+
           <div className="flex flex-col items-center justify-center min-h-screen px-4 md:px-8 lg:px-16 relative z-10">
-              <div className="text-center mb-8 mt-4 md:mt-0">
-                  <h2 className="text-4xl md:text-5xl font-extrabold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-500 animate-pulse">
+              <div className="text-center mb-8 mt-10 md:mt-0">
+                  <h2 className="text-5xl md:text-5xl font-extrabold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-500 animate-pulse">
                       HamSupportX
                   </h2>
               </div>
@@ -20,12 +19,14 @@ const Home: NextPage = () => {
                   <p className="text-gray-400 mb-6 text-sm md:text-lg">
                       Accept Crypto Support, Build Exclusive Memberships, and Launch Your Decentralized Shop with Ease!
                   </p>
-                  <button
-                      className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-3 rounded-full font-semibold shadow-lg transform hover:scale-105 transition-transform duration-300">
-                      Sign up for free
-                      <i className="fas fa-arrow-right ml-2">
-                      </i>
-                  </button>
+                  <Link href={"/dashboard"}>
+                      <button
+                          className="mt-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-3 rounded-full font-semibold shadow-lg transform hover:scale-105 transition-transform duration-300">
+                          Get Started
+                          <i className="fas fa-arrow-right ml-2">
+                          </i>
+                      </button>
+                  </Link>
               </div>
 
               <div className="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-6xl">
