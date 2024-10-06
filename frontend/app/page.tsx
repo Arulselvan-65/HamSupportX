@@ -25,7 +25,7 @@ const Home: NextPage = () => {
                   <p className="text-gray-400 mb-6 text-sm md:text-lg">
                       Accept Crypto Support, Build Exclusive Memberships, and Launch Your Decentralized Shop with Ease!
                   </p>
-                  <Link href={"/dashboard"}>
+                  <Link href={"/dashboard/explore"}>
                       <button
                           className="mt-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-3 rounded-full font-semibold shadow-lg transform hover:scale-105 transition-transform duration-300">
                           Get Started

@@ -1,5 +1,5 @@
 "use client";
-import { NextPage } from "next";
+
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Sidebar from "@/components/Sidebar";
 import Navbar from "@/components/Navbar";
@@ -9,7 +9,7 @@ interface DashboardLayoutProps {
     children: React.ReactNode;
 }
 
-const Dashboard: React.FC<DashboardLayoutProps> = ({ children }) => {
+const Dashboard = ({ children }: DashboardLayoutProps) => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     const toggleSidebar = () => {
