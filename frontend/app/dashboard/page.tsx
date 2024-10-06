@@ -5,11 +5,9 @@ import Sidebar from "@/components/Sidebar";
 import Navbar from "@/components/Navbar";
 import React, { useState } from "react";
 
-interface DashboardLayoutProps {
-    children: React.ReactNode;
-}
 
-const Dashboard = ({ children }: DashboardLayoutProps) => {
+
+const Dashboard = ({ children }: any) => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     const toggleSidebar = () => {
