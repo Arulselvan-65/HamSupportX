@@ -37,7 +37,7 @@ const Home: NextPage = () => {
 
               <div className="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-6xl">
                   <div
-                      className="bg-gray-800 cursor-pointer p-6 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 shadow-lg">
+                      className="bg-gray-800 p-6 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 shadow-lg">
                       <i className="fas fa-globe text-3xl mb-4 text-purple-500">
                       </i>
                       <h2 className="font-semibold mb-2 text-xl">
