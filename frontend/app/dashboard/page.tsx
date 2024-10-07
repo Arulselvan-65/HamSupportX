@@ -4,7 +4,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import Sidebar from "@/components/Sidebar";
 import Navbar from "@/components/Navbar";
 import React, { useState } from "react";
-
+import ConnectButtonC from "@/components/ConnectButton";
 
 
 const Dashboard = ({ children }: any) => {
@@ -16,6 +16,9 @@ const Dashboard = ({ children }: any) => {
 
     return (
         <div className="flex h-screen">
+            <div className="hidden md:block absolute top-5 right-3">
+                <ConnectButtonC/>
+            </div>
             {/* Sidebar*/}
             <div className="hidden md:block md:w-64">
                 <Sidebar />

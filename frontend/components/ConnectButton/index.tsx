@@ -1,8 +1,6 @@
 'use client'
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Button from '../Button';
-import Image from "next/image";
-import wallet_icon from "@/assets/wallet-icon.png";
 
 const ConnectButtonC = () => {
     return (
@@ -53,13 +51,8 @@ const ConnectButtonC = () => {
                                             style={{ textAlign: 'left' }}
                                         >
                                             <div
-                                                className='flex items-center justify-center rounded-lg text-gray-200 bg-gray-800 w-40 px-1 h-[51px] text-[18px]'>
-                                                <div className='flex w-12 items-center justify-start'>
-                                                    <Image src={wallet_icon}
-                                                           style={{height: "35px", width:"35px"}} alt={"wallet-icon"}/>
-
-                                                </div>
-                                                {account.displayName}
+                                                className='flex items-center justify-center rounded-lg  bg-[#1a1b1b] w-36 px-1 h-10 font-semibold text-[16px]'>
+                                                <span className="rainbow-text"> {account.displayName}</span>
                                             </div>
                                         </button>
                                     </div>

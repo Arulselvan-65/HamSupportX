@@ -1,7 +1,7 @@
 const Button = (props : any) => {
     return(
-        <button onClick={props.onclick} type="button" className={`h-12 bg-gray-800  text-white font-semibold shadow-md transform hover:scale-110 transition-all duration-300 rounded-lg w-36`}>
-            {props.text}
+        <button onClick={props.onclick} type="button" className={`h-10 bg-[#1a1b1b] font-semibold shadow-md transform hover:scale-105 transition-all duration-300 text-[16px] rounded-lg w-36`}>
+            <span className="rainbow-text"> {props.text}</span>
         </button>
     )
 }

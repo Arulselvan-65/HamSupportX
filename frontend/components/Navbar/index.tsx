@@ -14,17 +14,16 @@ const Navbar: React.FC<{ toggleSidebar: () => void }> = ({ toggleSidebar }) => {
             <div>
                 {/* Mobile Navbar */}
                 <div
-                    className="relative top-0 left-0 right-0 bg-black p-4 md:hidden flex justify-between items-center z-50">
+                    className="relative top-0 left-0 right-0 bg-black p-4 md:hidden flex items-center z-50">
                     <button className="text-white p-2 rounded cursor-pointer" onClick={toggleSidebar}>
                         <i className="fas fa-bars"></i>
                     </button>
 
-                    <div>
+                    <div className="flex justify-center w-full">
                         <h2 className="text-1xl font-extrabold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-500 animate-pulse">
                             HamSupportX
                         </h2>
                     </div>
-                    <ConnectButtonC/>
 
                 </div>
 
