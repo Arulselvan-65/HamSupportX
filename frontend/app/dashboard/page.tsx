@@ -3,12 +3,12 @@
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Sidebar from "@/components/Sidebar";
 import Navbar from "@/components/Navbar";
-import React, {ReactNode, useState} from "react";
+import React, { useState} from "react";
 import ConnectButtonC from "@/components/ConnectButton";
 import {NextPage} from "next";
 
 
-const Dashboard: NextPage<{ children: ReactNode }> = ({ children })  => {
+const Dashboard: NextPage<{ children: React.ReactNode }> = ({ children })  => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     const toggleSidebar = () => {
