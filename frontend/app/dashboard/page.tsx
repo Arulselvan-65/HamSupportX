@@ -6,9 +6,11 @@ import Navbar from "@/components/Navbar";
 import React, { useState} from "react";
 import ConnectButtonC from "@/components/ConnectButton";
 import {NextPage} from "next";
+interface DashboardProps {
+    children: React.ReactNode;
+}
 
-
-const Dashboard: NextPage<{ children: React.ReactNode }> = ({ children })  => {
+const Dashboard: NextPage<DashboardProps> = ({ children }) => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     const toggleSidebar = () => {
