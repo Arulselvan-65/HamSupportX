@@ -10,7 +10,8 @@ interface DashboardProps {
     children: React.ReactNode;
 }
 
-const Dashboard: NextPage<DashboardProps> = ({ children }) => {
+const Dashboard= ({ children }: { children: React.ReactNode })  => {
+
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     const toggleSidebar = () => {
