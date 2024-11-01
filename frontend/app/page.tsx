@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Link from "next/link";
 
-const Home: NextPage = () => {
+const LandingPage: NextPage = () => {
   return (
       <div className="overflow-hidden">
           <div className="neon-circle circle-1">
@@ -88,4 +88,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default LandingPage;

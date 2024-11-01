@@ -10,36 +10,41 @@ const Sidebar: React.FC<SidebarProps> = ({ showLogo = true }) => {
     return (
         <div className="w-64 h-full blurred-bg p-4">
             {showLogo && (
+                <Link href={"/"} >
                 <div className="flex items-center mb-8" style={{height: '40px'}}>
-                    <h2 className="text-[1.7rem] font-extrabold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-500 animate-pulse">
+                    <h2 className="text-[1.7rem] select-none cursor-pointer font-extrabold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-500 animate-pulse">
                         HamSupportX
                     </h2>
                 </div>
+                </Link>
             )}
             {!showLogo && (
                 <div className="mb-8" style={{height: '40px'}}></div>
             )}
 
-            <nav className="space-y-4">
-                <a className="flex items-center text-gray-300 hover:text-white" href="#">
-                    <i className="fas fa-home mr-3"></i>
-                    Home
-                </a>
-                <a className="flex items-center text-gray-300 hover:text-white" href="#">
-                    <i className="fas fa-eye mr-3"></i>
-                    View Page
-                </a>
-                <Link href={"/dashboard/explore"}>
-                    <p className="flex items-center text-gray-300 hover:text-white bg-gray-800 p-2 rounded">
-                        <i className="fas fa-th mr-3"></i>
-                        Explore Creators
-                    </p>
+            <nav className="space-y-2">
+                <Link href={"/dashboard/home"} >
+                    <div className="flex items-center h-10 rounded p-2 hover:bg-gray-800">
+                        <div className="mr-3">
+                            <i className="fas fa-home"></i>
+                        </div>
+                        <p className="text-gray-300 h-full">Home</p>
+                    </div>
+                </Link>
+
+                <Link href={"/dashboard/explore"} >
+                    <div className="flex items-center h-10 rounded p-2 hover:bg-gray-800">
+                        <div className="mr-3">
+                            <i className="fas fa-th"></i>
+                        </div>
+                        <p className="text-gray-300 h-full">Explore</p>
+                    </div>
                 </Link>
             </nav>
 
             <div className="mt-8">
                 <h3 className="text-gray-500 uppercase text-xs font-semibold mb-2">Monetize</h3>
-                <nav className="space-y-4">
+                <nav className="space-y-2">
                     <a className="flex items-center text-gray-300 hover:text-white" href="#">
                         <i className="fas fa-heart mr-3"></i>
                         Supporters

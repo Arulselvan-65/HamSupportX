@@ -102,10 +102,7 @@ body {
     border-bottom: 2px solid #8a2be2;
     color: #8a2be2;
 }
-.search-input {
-    background-color: #1a1a1a;
-    border: 1px solid #333;
-}
+
 .search-input:focus {
     border-color: #8a2be2;
 }

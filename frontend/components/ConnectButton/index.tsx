@@ -31,7 +31,7 @@ const ConnectButtonC = () => {
                             {(() => {
                                 if (!connected) {
                                     return (
-                                        <Button onclick={openConnectModal} text={"Connect Wallet"}/>
+                                        <Button onclick={openConnectModal} className= "bg-gradient-to-r from-purple-500 to-indigo-500 text-white" text={"Connect Wallet"}/>
                                     );
                                 }
 
@@ -51,8 +51,8 @@ const ConnectButtonC = () => {
                                             style={{ textAlign: 'left' }}
                                         >
                                             <div
-                                                className='flex items-center justify-center rounded-lg  bg-[#1a1b1b] w-36 px-1 h-10 font-semibold text-[16px]'>
-                                                <span className="rainbow-text"> {account.displayName}</span>
+                                                className='flex items-center justify-center rounded-lg  bg-gradient-to-r from-purple-500 to-indigo-500 text-white w-36 px-1 h-10 font-semibold text-[16px]'>
+                                                <span> {account.displayName}</span>
                                             </div>
                                         </button>
                                     </div>
