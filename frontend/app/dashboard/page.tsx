@@ -5,12 +5,8 @@ import Sidebar from "@/components/Sidebar";
 import Navbar from "@/components/Navbar";
 import React, { useState} from "react";
 import ConnectButtonC from "@/components/ConnectButton";
-import {NextPage} from "next";
-interface DashboardProps {
-    children: React.ReactNode;
-}
 
-const Dashboard= ({ children }: { children: React.ReactNode })  => {
+const Dashboard= ({ children }: any)  => {
 
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
